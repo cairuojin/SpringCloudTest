@@ -1,4 +1,4 @@
-package com.gjsyoung;
+package com.gjsyoung.SpringCloudTest_UserProvider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

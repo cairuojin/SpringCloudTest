@@ -24,3 +24,13 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+
+### NetBeans ###
+/SpringCloudTest_UserProvider/classes/*
+/SpringCloudTest_UserProvider/target/*
+/SpringCloudTest_UserProvider/log/*
+
+/SpringCloudTest_MovieProvider/classes/*
+/SpringCloudTest_MovieProvider/target/*
+/SpringCloudTest_MovieProvider/log/*

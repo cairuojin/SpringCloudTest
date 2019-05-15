@@ -1,8 +1,13 @@
 server:
-    port: 8080
+    port: 80
+
+    servlet:
+      jsp:
+        init-parameters:
+          development: true
 
 logging:
-    com.gjsyoung.SpringCloudTest: DEBUG
+    com.gjsyoung.SpringCloudTest: INFO
 
 
 spring:
@@ -20,3 +25,10 @@ spring:
         username: cairuojin
         password: 44052100
         driver-class-name: com.mysql.jdbc.Driver
+
+    mvc:
+        static:
+            static-path-pattern: /**
+        view:
+            prefix: /WEB-INF/jsp/
+            suffix: .jsp

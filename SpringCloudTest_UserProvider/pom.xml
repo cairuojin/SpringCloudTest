@@ -5,8 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gjsyoung</groupId>
-    <artifactId>SpringCloudTest</artifactId>
+    <artifactId>SpringCloudTest_UserProvider</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>SpringCloudTest_UserProvider</name>
+    <packaging>war</packaging>
 
     <!-- 引入SpringBoot -->
     <parent>
@@ -45,6 +47,16 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+        <!-- JSP依赖 -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <!--<scope>provided</scope>-->
+        </dependency>
 
     </dependencies>
 
