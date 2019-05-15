@@ -1,13 +1,8 @@
 server:
     port: 80
 
-    servlet:
-      jsp:
-        init-parameters:
-          development: true
-
 logging:
-    com.gjsyoung.SpringCloudTest: INFO
+    com.gjsyoung.SpringCloudTest: DEBUG
 
 
 spring:
@@ -32,3 +27,13 @@ spring:
         view:
             prefix: /WEB-INF/jsp/
             suffix: .jsp
+
+    application:
+        name: SpringCloudTest_UserProvider
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8761/eureka/
+    instance:
+        prefer-ip-address: true

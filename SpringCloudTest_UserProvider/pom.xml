@@ -10,6 +10,7 @@
     <name>SpringCloudTest_UserProvider</name>
     <packaging>war</packaging>
 
+
     <!-- 引入SpringBoot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -58,6 +59,11 @@
             <!--<scope>provided</scope>-->
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <version>1.4.5.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <!-- 引入SpringCloud的依赖 -->
