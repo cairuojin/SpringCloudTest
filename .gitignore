@@ -34,3 +34,15 @@
 /SpringCloudTest_MovieProvider/classes/*
 /SpringCloudTest_MovieProvider/target/*
 /SpringCloudTest_MovieProvider/log/*
+
+/SpringCloudTest_EurekaServerTest/classes/*
+/SpringCloudTest_EurekaServerTest/target/*
+/SpringCloudTest_EurekaServerTest/log/*
+
+/SpringCloudTest_EurekaServerTest_authenticating/classes/*
+/SpringCloudTest_EurekaServerTest_authenticating/target/*
+/SpringCloudTest_EurekaServerTest_authenticating/log/*
+
+/SpringCloudTest_EurekaServerTest_ha/classes/*
+/SpringCloudTest_EurekaServerTest_ha/target/*
+/SpringCloudTest_EurekaServerTest_ha/log/*

@@ -13,3 +13,10 @@ eureka:
 Spring:
     application:
         name: SpringCloudTest_EurekaServerTest_authenticating
+
+security:
+    basic:
+        enabled: true
+    user:
+        name: cairuojin
+        password: 123456
