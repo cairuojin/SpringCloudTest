@@ -12,6 +12,8 @@
         <module>SpringCloudTest_UserProvider</module>
         <module>SpringCloudTest_MovieProvider</module>
         <module>SpringCloudTest_EurekaServerTest</module>
+        <module>SpringCloudTest_EurekaServerTest_ha</module>
+        <module>SpringCloudTest_EurekaServerTest_authenticating</module>
     </modules>
     <packaging>pom</packaging>
     <description>微服务测试父工程</description>
@@ -30,8 +32,8 @@
     </repositories>
 	
     <dependencyManagement>
-        <!-- SpringCloud -->
         <dependencies>
+            <!-- SpringCloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -53,18 +55,14 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-jpa</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate.javax.persistence</groupId>
-                <artifactId>hibernate-jpa-2.1-api</artifactId>
-                <version>1.0.0.Final</version>
+                <version>1.5.15.RELEASE</version>
             </dependency>
 
             <!-- Mysql -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <scope>runtime</scope>
+                <version>5.1.40</version>
             </dependency>
 
             <!-- test -->

@@ -1,0 +1,15 @@
+server:
+    port: 8761
+
+eureka:
+    instance:
+        hostname: peer1
+        prefer-ip-address: false
+
+    client:
+        service-url:
+            defaultZone: http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
+
+Spring:
+    application:
+        name: SpringCloudTest_EurekaServerTest_ha
