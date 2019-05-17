@@ -27,9 +27,15 @@
 
 
 ### NetBeans ###
+/log/*
+
 /SpringCloudTest_UserProvider/classes/*
 /SpringCloudTest_UserProvider/target/*
 /SpringCloudTest_UserProvider/log/*
+
+/SpringCloudTest_UserProvider_ribbon/classes/*
+/SpringCloudTest_UserProvider_ribbon/target/*
+/SpringCloudTest_UserProvider_ribbon/log/*
 
 /SpringCloudTest_MovieProvider/classes/*
 /SpringCloudTest_MovieProvider/target/*

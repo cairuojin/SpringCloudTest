@@ -1,5 +1,5 @@
 server:
-    port: 80
+    port: 8090
 
 logging:
     com.gjsyoung.SpringCloudTest: DEBUG
@@ -29,7 +29,7 @@ spring:
             suffix: .jsp
 
     application:
-        name: SpringCloudTest_UserProvider
+        name: SpringCloudTest-UserProvider
 
 eureka:
     client:
@@ -37,6 +37,7 @@ eureka:
             defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://cairuojin:123456@localhost:8763/eureka/
     instance:
         prefer-ip-address: true
+        hostname: user
         metadata-map:
             myname: cairuojin
             myage: 22

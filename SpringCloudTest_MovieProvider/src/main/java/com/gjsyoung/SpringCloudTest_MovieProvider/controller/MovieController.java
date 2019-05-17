@@ -4,7 +4,9 @@ import com.gjsyoung.SpringCloudTest_MovieProvider.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
@@ -21,18 +23,30 @@ public class MovieController {
     @Autowired
     DiscoveryClient discoveryClient;
 
+    @Autowired
+    LoadBalancerClient loadBalancerClient;
+
     @RequestMapping("/movie")
     public ModelAndView movieTest(Integer id){
         ModelAndView mav = new ModelAndView("test");
         //远程调用并获取对象
-        User user = restTemplate.getForObject("http://localhost/" + id, User.class);
+        User user = restTemplate.getForObject("http://SpringCloudTest-UserProvider/" + 1 , User.class);
         mav.addObject("user",user);
         return mav;
+    }
+
+    @GetMapping("/log-instance")
+    @ResponseBody
+    public void logUserInstance(){
+        ServiceInstance userprovider = loadBalancerClient.choose("SpringCloudTest-UserProvider");
+        System.out.println(userprovider.getServiceId() + " "
+                + userprovider.getHost() + ":"
+                + userprovider.getPort());
     }
 
     @ResponseBody
     @RequestMapping("/showInfo")
     public List<ServiceInstance> showInfo(){
-        return discoveryClient.getInstances("SpringCloudTest_UserProvider");
+        return discoveryClient.getInstances("SpringCloudTest-UserProvider");
     }
 }
