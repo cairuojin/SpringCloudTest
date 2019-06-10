@@ -1,0 +1,41 @@
+server:
+    port: 8081
+
+logging:
+    com.gjsyoung.SpringCloudTest: DEBUG
+
+
+spring:
+#    profiles:
+#       active: dev
+
+    jpa:
+        generate-ddl: false
+        show-sql: true
+        hibernate:
+            ddl-auto: none
+
+    datasource:     # 数据库地址
+        url: jdbc:mysql://111.230.196.33:3306/SpringInAction?useSSL=false
+        username: cairuojin
+        password: 44052100
+        driver-class-name: com.mysql.jdbc.Driver
+
+    mvc:
+        static:
+            static-path-pattern: /**
+        view:
+            prefix: /WEB-INF/jsp/
+            suffix: .jsp
+
+
+    application:
+        name: SpringCloudTest_MovieProvider_feign
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://cairuojin:123456@localhost:8763/eureka/
+    instance:
+        prefer-ip-address: true
+        hostname: movie

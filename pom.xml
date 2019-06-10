@@ -12,6 +12,7 @@
         <module>SpringCloudTest_UserProvider</module>
         <module>SpringCloudTest_UserProvider_ribbon</module>
         <module>SpringCloudTest_MovieProvider</module>
+        <module>SpringCloudTest_MovieProvider_feign</module>
         <module>SpringCloudTest_EurekaServerTest</module>
         <module>SpringCloudTest_EurekaServerTest_ha</module>
         <module>SpringCloudTest_EurekaServerTest_authenticating</module>
