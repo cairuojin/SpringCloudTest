@@ -6,9 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ProviderUserApplication_ribbon {
+public class ProviderUserApplication_ha {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProviderUserApplication_ribbon.class, args);
+        SpringApplication.run(ProviderUserApplication_ha.class, args);
     }
 }

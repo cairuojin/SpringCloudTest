@@ -1,6 +1,7 @@
 package com.gjsyoung.SpringCloudTest_MovieProvider.controller;
 
 import com.gjsyoung.SpringCloudTest_MovieProvider.domain.User;
+import com.gjsyoung.SpringCloudTest_MovieProvider.service.UserFeignCline;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -26,6 +27,10 @@ public class MovieController {
     @Autowired
     LoadBalancerClient loadBalancerClient;  //Ribbon负载均衡对象
 
+    @Autowired
+    UserFeignCline userFeignCline;
+
+
     /**
      * 调用用户微服务
      * @param id
@@ -39,6 +44,15 @@ public class MovieController {
         mav.addObject("user",user);
         return mav;
     }
+
+    @RequestMapping("/movie1")
+    public ModelAndView movieTest1(Integer id){
+        ModelAndView mav = new ModelAndView("test");
+        User user = userFeignCline.getUser(1L);
+        mav.addObject("user",user);
+        return mav;
+    }
+
 
     /**
      * 获取User微服务实例  打印获取到的是哪个实例

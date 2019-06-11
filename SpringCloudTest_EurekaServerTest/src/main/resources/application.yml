@@ -3,8 +3,8 @@ server:
 
 eureka:
     instance:
-        hostname: peer2
-        prefer-ip-address: false
+        hostname: 111.230.196.33
+        prefer-ip-address: true
 
     client:
         service-url:
