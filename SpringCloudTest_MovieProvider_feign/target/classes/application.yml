@@ -1,5 +1,5 @@
 server:
-    port: 8080
+    port: 8081
 
 logging:
     com.gjsyoung.SpringCloudTest: DEBUG
@@ -30,12 +30,12 @@ spring:
 
 
     application:
-        name: SpringCloudTest_MovieProvider
+        name: SpringCloudTest_MovieProvider_feign
 
 eureka:
     client:
         service-url:
-            defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://cairuojin:123456@localhost:8763/eureka/
+            defaultZone: http://111.230.196.33:8761/eureka/,http://111.230.196.33:8762/eureka/,http://cairuojin:123456@111.230.196.33:8763/eureka/
     instance:
         prefer-ip-address: true
         hostname: movie
