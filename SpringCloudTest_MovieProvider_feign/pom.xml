@@ -67,6 +67,12 @@
 			<artifactId>spring-cloud-starter-ribbon</artifactId>
 		</dependency>
 
+		<!-- Hystrix -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<!-- 添加SpringBoot的Maven插件 -->
