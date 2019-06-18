@@ -2,6 +2,8 @@ package com.gjsyoung.SpringCloudTest_MovieProvider.controller;
 
 import com.gjsyoung.SpringCloudTest_MovieProvider.domain.User;
 import com.gjsyoung.SpringCloudTest_MovieProvider.service.UserFeignCline;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -45,12 +47,11 @@ public class MovieController {
         return mav;
     }
 
-    @RequestMapping("/movie1")
-    public ModelAndView movieTest1(Integer id){
-        ModelAndView mav = new ModelAndView("test");
-        User user = userFeignCline.getUser(1L);
-        mav.addObject("user",user);
-        return mav;
+    @RequestMapping("/findUserById")
+    @ResponseBody
+    public User findUserById(Integer id){
+        User user = userFeignCline.getUser(1L);//调用用户微服务
+        return user;
     }
 
 
