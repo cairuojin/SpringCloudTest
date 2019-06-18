@@ -17,6 +17,7 @@
         <module>SpringCloudTest_EurekaServerTest</module>
         <module>SpringCloudTest_EurekaServerTest_ha</module>
         <module>SpringCloudTest_EurekaServerTest_authenticating</module>
+        <module>SpringCloudTest_Turbine</module>
     </modules>
     <description>微服务测试父工程</description>
 

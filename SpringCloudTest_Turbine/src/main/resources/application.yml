@@ -1,0 +1,23 @@
+server:
+    port: 8031
+
+logging:
+    com.gjsyoung.SpringCloudTest: DEBUG
+
+
+spring:
+    application:
+        name: SpringCloudTest-Turbine
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://111.230.196.33:8761/eureka/,http://111.230.196.33:8762/eureka/,http://cairuojin:123456@111.230.196.33:8763/eureka/
+    instance:
+        prefer-ip-address: true
+
+turbine:
+    app-config:
+        SpringCloudTest_MovieProvider,
+        SpringCloudTest_MovieProvider_feign,
+        SpringCloudTest-UserProvider
