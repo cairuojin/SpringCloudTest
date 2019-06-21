@@ -30,7 +30,7 @@ spring:
 
 
     application:
-        name: SpringCloudTest_MovieProvider_feign
+        name: SpringCloudTest-MovieProvider-feign
 
 eureka:
     client:

@@ -5,22 +5,18 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpResponse;
+import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
 
-/**
- * @Classname UserFallbackProvider
- * @Description TODO
- * @Date 2019/6/20 22:38
- * @Created by cairuojin
- */
+@Component
 public class UserFallbackProvider implements ZuulFallbackProvider{
     @Override
     public String getRoute() {
-        return "springcloudtest-userprovider";        //表明为哪个微服务提供回退
+        return "SpringCloudTest-UserProvider";        //表明为哪个微服务提供回退
     }
 
     @Override
@@ -51,7 +47,7 @@ public class UserFallbackProvider implements ZuulFallbackProvider{
             }
 
             @Override
-            public HttpHeaders getHeaders() {
+            public HttpHeaders getHeaders() {       //响应头设置
                 HttpHeaders httpHeaders = new HttpHeaders();
                 MediaType mt = new MediaType("application","json", Charset.forName("UTF-8"));
                 httpHeaders.setContentType(mt);
